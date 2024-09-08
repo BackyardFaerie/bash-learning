@@ -70,3 +70,9 @@ then
 	esac
 done
 fi
+
+if grep -q "Arch" $release
+then
+	/usr/bin/printf "Updating system"
+	sudo pacman -Syu
+fi
